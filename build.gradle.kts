@@ -12,6 +12,9 @@ repositories {
 }
 
 dependencies {
+    implementation("com.squareup:kotlinpoet:1.8.0")
+    implementation("org.apache.poi:poi:5.0.0")
+
     testImplementation(kotlin("test-junit5"))
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")
     testRuntimeOnly("org.junit.jupiter:junit-jupiter-engine:5.6.0")
