@@ -5,15 +5,27 @@ plugins {
 }
 
 group = "org.hl7.fhir"
-version = "1.0-SNAPSHOT"
+version = "1.0.0-SNAPSHOT"
 
 repositories {
+    google()
+    jcenter()
+    mavenLocal()
     mavenCentral()
+    maven {
+        url = uri("https://s01.oss.sonatype.org/content/repositories/snapshots")
+    }
+    maven {
+        url = uri("https://s01.oss.sonatype.org/service/local/staging/deploy/maven2/")
+    }
 }
 
 dependencies {
     implementation("com.squareup:kotlinpoet:1.8.0")
-    implementation("org.apache.poi:poi:5.0.0")
+    implementation("org.apache.poi:poi-ooxml:5.0.0")
+
+    implementation ("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.1")
+    implementation("ca.miantorno:susu:1.0.0-a1-SNAPSHOT")
 
     testImplementation(kotlin("test-junit5"))
     testImplementation("org.junit.jupiter:junit-jupiter-api:5.6.0")

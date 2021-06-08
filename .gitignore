@@ -1,6 +1,6 @@
 
-# Created by https://www.toptal.com/developers/gitignore/api/eclipse,intellij,java,kotlin,osx,windows
-# Edit at https://www.toptal.com/developers/gitignore?templates=eclipse,intellij,java,kotlin,osx,windows
+# Created by https://www.toptal.com/developers/gitignore/api/intellij,kotlin,java,eclipse,osx,windows
+# Edit at https://www.toptal.com/developers/gitignore?templates=intellij,kotlin,java,eclipse,osx,windows
 
 ### Eclipse ###
 .metadata
@@ -264,4 +264,23 @@ $RECYCLE.BIN/
 # Windows shortcuts
 *.lnk
 
-# End of https://www.toptal.com/developers/gitignore/api/eclipse,intellij,java,kotlin,osx,windows
+### Gradle ###
+.gradle
+build/
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
+### Gradle Patch ###
+**/build/
+
+# End of https://www.toptal.com/developers/gitignore/api/intellij,kotlin,java,eclipse,osx,windows
