@@ -21,10 +21,13 @@ repositories {
 }
 
 dependencies {
+    implementation(fileTree("libs/compile"))
+    compileOnly(fileTree("libs/provided"))
+
     implementation("com.squareup:kotlinpoet:1.8.0")
     implementation("org.apache.poi:poi-ooxml:5.0.0")
 
-    implementation ("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.1")
+    implementation("com.fasterxml.jackson.module:jackson-module-kotlin:2.12.1")
     implementation("ca.miantorno:susu:1.0.0-a1-SNAPSHOT")
 
     testImplementation(kotlin("test-junit5"))
@@ -36,6 +39,6 @@ tasks.test {
     useJUnitPlatform()
 }
 
-tasks.withType<KotlinCompile>() {
+tasks.withType<KotlinCompile> {
     kotlinOptions.jvmTarget = "11"
 }

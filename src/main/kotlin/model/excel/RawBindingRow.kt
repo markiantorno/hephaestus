@@ -1,8 +1,8 @@
-package model
+package model.excel
 
 import annotation.CellInfo
 
-data class BindingField(
+data class RawBindingRow(
     @CellInfo(index = 0) val bindingName: String = "",
     @CellInfo(index = 1) val definition: String = "",
     @CellInfo(index = 2) val strength: String = "",

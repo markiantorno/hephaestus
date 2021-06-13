@@ -1,12 +1,15 @@
-package model
+package model.excel
 
 import annotation.CellInfo
 import model.field.CardinalityBound
-import model.parser.BooleanStringCellParser
-import model.parser.CardinalityCellParser
-import model.parser.StringListCellParser
+import model.excel.parser.BooleanStringCellParser
+import model.excel.parser.CardinalityCellParser
+import model.excel.parser.StringListCellParser
 
-data class ResourceField(
+/**
+ * The raw dump of all data in the xlsx resource file.
+ */
+data class RawResourceRow(
     @CellInfo(index = 0)
     val path: String = "",
     @CellInfo(index = 1, cellParser = StringListCellParser::class)
