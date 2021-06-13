@@ -11,7 +11,7 @@ val mappedBindings = HashMap<String, ParsedSheet>()
 fun main(args: Array<String>) {
     println("Starting parsing files...")
     val excelFiles = findSpreadsheetXMLFiles(absPathToExcel)
-    excelFiles.forEach { println(it.name) }
+    excelFiles.forEach { println("${it.name}, ${it.absolutePath}") }
     excelFiles.forEach { file ->
         val readExcel = readExcel(file.inputStream())
         writeWorkbook(
